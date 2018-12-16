@@ -76,4 +76,13 @@ class Notes extends \yii\db\ActiveRecord
 
     }
 
+    public function delete() {
+
+        $note = self::findOne($this->id);
+        $note->status = $this->status;
+        return $note->save();
+
+        return true;
+    }
+
 }
