@@ -82,7 +82,6 @@ class Notes extends \yii\db\ActiveRecord
         $note->status = $this->status;
         return $note->save();
 
-        return true;
     }
 
 }
